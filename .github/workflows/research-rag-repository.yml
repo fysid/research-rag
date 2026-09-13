@@ -1,0 +1,47 @@
+name: Repository checks
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: repository-checks-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  repository-checks:
+    name: Repository metadata
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 2
+          persist-credentials: false
+
+      - name: Check changed lines for whitespace errors
+        run: git diff --check HEAD^ HEAD
+
+      - name: Check required repository files
+        shell: bash
+        run: |
+          for file in \
+            AGENTS.md \
+            README.md \
+            docs/LLM_DEVELOPMENT.md \
+            docs/ROADMAP.md \
+            docs/UPSTREAM.md \
+            .github/ISSUE_TEMPLATE/00_llm_task.yml \
+            pull_request_template.md \
+            .github/CODEOWNERS; do
+            if [ ! -s "$file" ]; then
+              echo "::error file=$file::Required repository file is missing or empty"
+              exit 1
+            fi
+          done

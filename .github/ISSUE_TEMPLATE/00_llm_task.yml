@@ -1,0 +1,42 @@
+name: LLM task
+description: Задача для разработки Research RAG через LLM
+title: "[Task]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Агент начинает с AGENTS.md. Шаблон описывает задачу; автоматический запуск LLM не подключён.
+        Не добавляйте ключи, пользовательские документы или приватные логи.
+  - type: textarea
+    id: goal
+    attributes:
+      label: Цель и проблема
+      description: Какую проблему решаем и для кого?
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Границы изменений
+      description: Что входит в задачу, что не входит, какие ограничения сохранить?
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Критерии приёмки
+      description: Наблюдаемые результаты, по которым можно принять работу; оформите списком.
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: Проверка результата
+      description: Команды, сценарии и синтетические данные. Если способ неизвестен, поручите агенту предложить его до реализации.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Контекст и зависимости
+      description: Связанные задачи, файлы, ОС и оборудование при необходимости.

@@ -1,3 +1,11 @@
+# Contributing to Research RAG
+
+For work in `fysid/research-rag`, follow [AGENTS.md](AGENTS.md) and the [LLM development workflow](docs/LLM_DEVELOPMENT.md). LLM agents implement and review changes; the owner accepts results. Open PRs against this fork's `master` branch.
+
+The original guidelines below are retained as reference for contributions to **upstream AnythingLLM**. Its AI-contribution rules apply when sending a PR upstream; the fork uses the process linked above.
+
+---
+
 # Contributing to AnythingLLM
 
 AnythingLLM is an open-source project and we welcome contributions from the community.
