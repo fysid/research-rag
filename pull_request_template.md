@@ -1,41 +1,25 @@
+## Цель
 
-### Pull Request Type
+<!-- Проблема и ссылка на задачу этого fork: Closes #номер. -->
 
-<!-- For change type, change [ ] to [x]. -->
+## Изменения
 
-- [ ] ✨ feat (New feature)
-- [ ] 🐛 fix (Bug fix)
-- [ ] ♻️ refactor (Code refactoring without changing behavior)
-- [ ] 💄 style (UI style changes)
-- [ ] 🔨 chore (Build, CI, maintenance)
-- [ ] 📝 docs (Documentation updates)
+<!-- Поведение и существенные решения. Для UI добавьте изображение. -->
 
-### Relevant Issues
+## Проверки
 
-<!-- Use "resolves #xxx" to auto resolve on merge. Otherwise, please use "connect #xxx" -->
+<!-- Точные команды и результаты. Невыполненные проверки — с причиной. -->
 
-resolves #
+## Ограничения и откат
 
-### Description
+<!-- Известные ограничения; как отменить изменение. Для миграций — последствия для данных. -->
 
-<!-- Describe the changes in this PR that are impactful to the repo. What problem does it solve? -->
+## LLM-разработка
 
+<!-- Агент/модель при наличии, результат независимого ревью. Полный диалог не нужен. -->
 
-### Visuals (if applicable)
-
-<!-- Add screenshots or screen recordings to demonstrate the changes, especially for UI updates. -->
-
-
-### Additional Information
-
-<!-- Add any other context about the Pull Request here that was not captured above. -->
-
-
-### Developer Validations
-
-<!-- All of the applicable items should be checked. -->
-
-- [ ] I ran `yarn lint` from the root of the repo & committed changes
-- [ ] Relevant documentation has been updated (if applicable)
-- [ ] I have tested my code functionality
-- [ ] Docker build succeeds locally
+- [ ] Прочитан AGENTS.md; изменения соответствуют задаче.
+- [ ] База PR — fysid/research-rag:master.
+- [ ] Выполнены относящиеся к изменению проверки; пропуски описаны.
+- [ ] Проверен итоговый diff; приватные данные и секреты не добавлены.
+- [ ] Документация обновлена, если изменилось поведение или процесс.

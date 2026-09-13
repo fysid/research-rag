@@ -10,3 +10,16 @@ aws_cf_deploy_anything_llm.json
 yarn.lock
 *.bak
 .idea
+
+# Research RAG: local runtime data and agent scratch files
+.env.*
+!.env.example
+!.env.*.example
+/.agent-artifacts/
+/local-data/
+/models/
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+*.sqlite-journal
